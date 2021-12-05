@@ -8,43 +8,28 @@ body{
     background-color: rgb(255, 255, 255);
 }
 header{
+    background-color: rgb(105, 255, 193);
     background-color: rgb(255, 105, 198);
-    background-color: rgb(255, 92, 105);
-
-    /* background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23ffffff' fill-opacity='0.6' fill-rule='evenodd'/%3E%3C/svg%3E"); */
 
     color: white;
     padding: 20px;
     text-align: center;
     font-size: 25px;
     text-transform:uppercase;
-    letter-spacing: 40px;
-    text-shadow: rgb(203, 117, 236) 5px 5px 5px;
-    text-shadow: rgba(78, 78, 78, 0.623) 5px 5px 5px;
-
-    /* border-bottom:3px solid rgb(255, 196, 255); */
+    letter-spacing: 30px;
+    text-shadow: rgba(78, 78, 78, 0.623) 10px 5px 3px;
 }
-footer{
-    background-color: rgb(105, 255, 193);
-    background-color: rgb(255, 105, 198);
-    background-color: rgb(255, 92, 105);
 
-
-    /* background-image: url("data:image/svg+xml,%3Csvg width='44' height='12' viewBox='0 0 44 12' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 12v-2L0 0v10l4 2h16zm18 0l4-2V0L22 10v2h16zM20 0v8L4 0h16zm18 0L22 8V0h16z' fill='%23ffffff' fill-opacity='0.6' fill-rule='evenodd'/%3E%3C/svg%3E"); */
-    padding: 50px;
-    font-size: 19px;
-    text-align: center;
-}
+/* ===========CONTENEDOR============== */
 .contenedor{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 10px;
-    width: 1000px;
-    padding: 50px;
-    margin: auto;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+/* ================ */
+    grid-auto-flow: dense;
+    /* grid-auto-rows: 15rem; */
+    grid-template-columns: repeat(auto-fill,minmax(15rem,1fr));
+/* ================ */
 }
 
 .contenedor img{
@@ -54,11 +39,10 @@ footer{
     object-fit: cover;
 }
 
-/* ======================= */
+/* ==========CONTENEDOR INVISIBLE============= */
 .contenedor-zoom{
     display: none;
 }
-
 .contenedor-zoom:target{
     display: flex;
     position: fixed;
@@ -77,16 +61,32 @@ footer{
     height: 100%;
     padding: 0 20px;
 }
+
+/* ============BOTONES=========== */
 .contenedor-zoom .botones-desplazamiento{
-    color: rgb(0, 0, 0);
-    background-color: yellow;
-    border-radius: 20px;
-    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    font-size: 2.5rem;
 }
+.contenedor-zoom .botones-desplazamiento:hover{
+    color: rgb(95, 95, 95);
+}
+
 .contenedor-zoom .boton-salir{
     position: absolute;
-    transform: translate(-10px,-280px);
-    font-size: 30px;
+    transform: translate(-5px,-285px);
+    font-size: 2.5rem;
     color: white;
-    font-size: 40px;
+}
+.contenedor-zoom .boton-salir:hover{
+    color: rgb(95, 95, 95);
+}
+
+/* ===========FOOTER============== */
+footer{
+    background-color: rgb(255, 92, 105);
+    background-color: rgb(105, 255, 193);
+    background-color: rgb(255, 105, 198);
+    padding: 50px;
+    font-size: 19px;
+    text-align: center;
 }
